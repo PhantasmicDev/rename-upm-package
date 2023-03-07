@@ -17,7 +17,6 @@ inputs:
     default: "com"
   full-name:
     description: "The desired full name for the package with the naming convetion of 'com.mycompany.mypackage'. If it isn't provided, it will be generated using the provided 'domain-extension', 'company-name' and 'package-name'."
-    required: false
   package-root-path:
     description: "The path to the root folder of your package."
     default: "${{ github.workspace }}"
