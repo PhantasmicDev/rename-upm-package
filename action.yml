@@ -1,0 +1,17 @@
+name: "Bash Action Template"
+author: "PhantasmicDev"
+description: "A template with the bare minimum to begin developing a custom GitHub action that runs a bash script."
+branding:
+  icon: "file-text"
+  color: "white"
+
+inputs:
+  my-input:
+    description: "Input Example"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - run: $GITHUB_ACTION_PATH/run.sh
+      shell: bash
