@@ -3,10 +3,10 @@ An action that will edit and rename files to reflect a name change in your [cust
 
 **This action will:**
 - Edit package.json file
-  - Sets the 'name' field to either the `full-name` input or "`domain-extension`.`company-name`.`package-name`" if no `full-name` input is given.
-  - Sets 'displayName' entry to the `package-name` input.
+  - Sets the 'name' field to either the [`full-name`](#full-name) input or "[`domain-extension`](#domain-extension).[`company-name`](#company-name).[`package-name`](#package-name)" if no [`full-name`](#full-name) input is given.
+  - Sets 'displayName' entry to the [`package-name`](#package-name) input.
 - Edit Assembly Definition files
-  - Rename Assembly Definition files to match [`company-name`].[`package-name`].asmdef naming convention.
+  - Rename Assembly Definition files to match [[`company-name`](#company-name)].[[`package-name`](#package-name)].asmdef naming convention.
   - Sets the 'name' entry.
   - Update 'references' entries to other asembly definition files that were renamed, if the assembly definition's 'Use GUID' option is unchecked in the Unity editor.
   
