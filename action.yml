@@ -10,7 +10,7 @@ inputs:
     description: "The name of the company or organization developing the package."
     required: true
   package-name:
-    description: "The diplay name for the package."
+    description: "The display name for the package."
     required: true
   domain-extension:
     description: "The domain name to use when generating the full package name if 'full-name' input is not provided."
