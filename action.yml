@@ -1,6 +1,6 @@
-name: "Bash Action Template"
+name: "Rename Upm Package"
 author: "PhantasmicDev"
-description: "A template with the bare minimum to begin developing a custom GitHub action that runs a bash script."
+description: "Renames and edits files to reflect a name change of a upm package."
 branding:
   icon: "file-text"
   color: "white"
