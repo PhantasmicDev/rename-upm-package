@@ -1,17 +1,35 @@
-name: "Rename Upm Package"
+name: "Rename UPM Package"
 author: "PhantasmicDev"
 description: "Renames and edits files to reflect a name change of a upm package."
 branding:
-  icon: "file-text"
-  color: "white"
+  icon: "edit-3"
+  color: "gray-dark"
 
 inputs:
-  my-input:
-    description: "Input Example"
+  company-name:
+    description: "The name of the company or organization developing the package."
+    required: true
+  package-name:
+    description: "The diplay name for the package."
+    required: true
+  domain-extension:
+    description: "The domain name to use when generating the full package name if 'full-name' input is not provided."
+    default: "com"
+  full-name:
+    description: "The desired full name for the package with the naming convetion of 'com.mycompany.mypackage'. If it isn't provided, it will be generated using the provided 'domain-extension', 'company-name' and 'package-name'."
     required: false
+  package-root-path:
+    description: "The path to the root folder of your package."
+    default: "${{ github.workspace }}"
 
 runs:
   using: "composite"
   steps:
     - run: $GITHUB_ACTION_PATH/run.sh
       shell: bash
+      env:
+        INPUT_COMPANY_NAME: "${{ inputs.company-name }}"
+        INPUT_PACKAGE_NAME: "${{ inputs.package-name }}"
+        INPUT_DOMAIN_EXTENSION: "${{ inputs.domain-extension }}"
+        INPUT_FULL_NAME: "${{ inputs.full-name }}"
+        INPUT_PACKAGE_ROOT_PATH: "${{ inputs.package-root-path }}"
